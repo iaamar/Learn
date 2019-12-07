@@ -3,80 +3,51 @@ final List<Profile> demoProfiles = [
     photos: [
       "assets/1.jpg",
     ],
-    name: "" ,
-    bio: "",
+    name: "Water Bottle" ,
+    bio: "Water Bottles are dry waste",
   ),
   new Profile(
     photos: [
       "assets/11.jpg",
     ],
-    name: "" ,
-    bio: "",
+    name: "Rotten Food" ,
+    bio: "Rotten Food is wet waste",
   ),
   new Profile(
     photos: [
       "assets/2.jpg",
     ],
-    name: "" ,
-    bio: "",
+    name: "Old Clothes" ,
+    bio: "Old Clothes are dry waste",
   ),
   new Profile(
     photos: [
       "assets/12.jpg",
     ],
-    name: "" ,
-    bio: "",
+    name: "Egg Shells" ,
+    bio: "Egg shells are wet waste",
   ),
   new Profile(
     photos: [
       "assets/3.jpg",
     ],
-    name: "" ,
-    bio: "",
+    name: "Used Papers" ,
+    bio: "Used Papers are dry waste",
   ),
   new Profile(
     photos: [
       "assets/13.jpg",
     ],
-    name: "" ,
-    bio: "",
-  ),
-  new Profile(
-    photos: [
-      "assets/4.jpg",
-    ],
-    name: "" ,
-    bio: "",
-  ),
-  new Profile(
-    photos: [
-      "assets/14.jpg",
-    ],
-    name: "" ,
-    bio: "",
-  ),
-  new Profile(
-    photos: [
-      "assets/15.jpg",
-    ],
-    name: "" ,
-    bio: "",
-  ),
-  new Profile(
-    photos: [
-      "assets/6.jpg",
-
-    ],
-    name: "",
-    bio: "",
+    name: "Vegie Remains" ,
+    bio: "Vegie Remains are wet waste",
   ),
   new Profile(
     photos: [
       "assets/16.jpg",
 
     ],
-    name: "",
-    bio: "",
+    name: "Banana Peels",
+    bio: "Banana Peels are wet waste",
   ),
 ];
 

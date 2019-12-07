@@ -62,18 +62,21 @@ class _MyHomePageState extends State<MyHomePage> {
           child: new Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              new RoundIconButton.large(
-                icon: Icons.keyboard_arrow_left,
-                iconColor: Colors.red,
-                
+              FlatButton(
+                // icon: Icons.keyboard_arrow_left,
+                // iconColor: Colors.red,
+                  child:Text("Wet",style: TextStyle(color: Colors.blue[900]),),   
                 onPressed: () {
                   matchEngine.currentMatch.nope();
                 },
               ),
-              new RoundIconButton.large(
-                icon: Icons.keyboard_arrow_right,
-                iconColor: Colors.green,
-                onPressed: () {
+             FlatButton(
+                child:Text("Dry",style: TextStyle(color: Colors.green[900]), ),
+                // icon: Icons.keyboard_arrow_right,
+                // iconColor: Colors.green,
+                onPressed: (
+                  
+                ) {
                   matchEngine.currentMatch.like();
                 },
               ),
