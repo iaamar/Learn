@@ -46,6 +46,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_text_to_speech:
+    dependency: "direct main"
+    description:
+      name: flutter_text_to_speech
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.7"
+  flutter_tts:
+    dependency: "direct main"
+    description:
+      name: flutter_tts
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.6.0"
   fluttery_dart2:
     dependency: "direct main"
     description:
@@ -135,6 +149,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.5"
+  tflite:
+    dependency: "direct main"
+    description:
+      name: tflite
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   typed_data:
     dependency: transitive
     description:

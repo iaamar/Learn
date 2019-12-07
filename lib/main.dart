@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import './cards.dart';
 import './matches.dart';
 import './profiles.dart';
+import 'package:tflite/tflite.dart';
+import 'package:flutter_tts/flutter_tts.dart';
 
 void main() => runApp(MyApp());
 
@@ -42,7 +44,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   Match match = new Match();
+  int counter = 0;
+  @override
+  void initState() {
+    super.initState();
+  }
 
   Widget _buildAppBar() {
     return AppBar(
@@ -50,11 +58,12 @@ class _MyHomePageState extends State<MyHomePage> {
       elevation: 0.0,
       centerTitle: true,
     );
+
   }
 
   Widget _buildBottomBar() {
     return BottomAppBar(
-      
+
         color: Colors.transparent,
         elevation: 0.0,
         child: new Padding(
@@ -62,21 +71,30 @@ class _MyHomePageState extends State<MyHomePage> {
           child: new Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-              FlatButton(
-                // icon: Icons.keyboard_arrow_left,
-                // iconColor: Colors.red,
-                  child:Text("Wet",style: TextStyle(color: Colors.blue[900]),),   
+             RaisedButton(
+//                 icon: Icons.keyboard_arrow_left,
+//                 iconColor: Colors.red,
+                  child:Text("Wet",style: TextStyle(color: Colors.white)
+                    ,),
+                color: Colors.blue,
                 onPressed: () {
+                  FlutterTts flutterTts = FlutterTts();
+                  counter % 2 == 0 ? flutterTts.speak('wrong') : flutterTts
+                      .speak('Correct');
+                  counter++;
                   matchEngine.currentMatch.nope();
                 },
               ),
-             FlatButton(
-                child:Text("Dry",style: TextStyle(color: Colors.green[900]), ),
+             RaisedButton(
+                child:Text("Dry",style: TextStyle(color: Colors.white),
+                ),
+                color: Colors.green,
                 // icon: Icons.keyboard_arrow_right,
                 // iconColor: Colors.green,
-                onPressed: (
-                  
-                ) {
+                onPressed: () {
+                  FlutterTts flutterTts = FlutterTts();
+                  counter % 2 == 0 ? flutterTts.speak('Correct') : flutterTts.speak('Wrong');
+                  counter++;
                   matchEngine.currentMatch.like();
                 },
               ),
@@ -87,6 +105,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    FlutterTts flutterTts = FlutterTts();
+    flutterTts.speak('Welcome');
     return Scaffold(
       appBar: _buildAppBar(),
       body: new CardStack(

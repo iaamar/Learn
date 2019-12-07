@@ -41,14 +41,6 @@ final List<Profile> demoProfiles = [
     name: "Vegie Remains" ,
     bio: "Vegie Remains are wet waste",
   ),
-  new Profile(
-    photos: [
-      "assets/16.jpg",
-
-    ],
-    name: "Banana Peels",
-    bio: "Banana Peels are wet waste",
-  ),
 ];
 
 class Profile {
