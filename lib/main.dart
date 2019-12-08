@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import './cards.dart';
 import './matches.dart';
 import './profiles.dart';
-import 'package:tflite/tflite.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 
 void main() => runApp(MyApp());
